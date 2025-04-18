@@ -71,8 +71,26 @@ button:hover {
 }
 
 .word-row {
-    margin: 10px 0;
-    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.length-label {
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.words {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.words span {
+    background-color: #f0f0f0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
 }
 
 .word-row span {

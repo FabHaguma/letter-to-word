@@ -73,7 +73,10 @@ class WordGame {
             .sort(([len1], [len2]) => parseInt(len1) - parseInt(len2))
             .map(([length, wordsOfLength]) => {
                 const sortedWords = wordsOfLength.sort((a, b) => a.localeCompare(b));
-                return `<div class="word-row">${sortedWords.map(word => `<span>${word}</span>`).join('')}</div>`;
+                return `<div class="word-row">
+                    <div class="length-label">${length} letters (${wordsOfLength.length} words):</div>
+                    <div class="words">${sortedWords.map(word => `<span>${word}</span>`).join('')}</div>
+                </div>`;
             });
 
         wordList.innerHTML = rows.join('');
